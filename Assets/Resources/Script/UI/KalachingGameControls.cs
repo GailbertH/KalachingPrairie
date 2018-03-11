@@ -18,7 +18,6 @@ public class KalachingGameControls : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
-		mainCamera.gameObject.SetActive (false);
 	}
 
 	void Start()
@@ -64,13 +63,15 @@ public class KalachingGameControls : MonoBehaviour
 		AMPM = hour > 12 ? "PM" : "AM";
 		hour = hour > 12 ? hour - 12 : hour;
 		min = (timeToConvert % 3600) / 60;
-		sec = (((timeToConvert % 3600) % 60) / 60);
+		sec = (((timeToConvert % 3600) % 60));
 		return (hour.ToString ("00:") + min.ToString ("00:") + sec.ToString ("00") + " " + AMPM);
 	}
 
 	public void Home()
 	{
-		
+		LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_UI + "," + SceneNames.GAME_SCENE);
+		LoadingManager.Instance.SetSceneToLoad (SceneNames.MAIN_MENU);
+		LoadingManager.Instance.LoadGameScene ();
 	}
 	public void Journal()
 	{

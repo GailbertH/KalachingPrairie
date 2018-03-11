@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  timeText: {fileID: 114201092500975400}
+  timeLabel: {fileID: 114201092500975400}
 --- !u!114 &114401767845307210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1603,7 +1603,7 @@ Canvas:
   m_GameObject: {fileID: 1649209211533168}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
