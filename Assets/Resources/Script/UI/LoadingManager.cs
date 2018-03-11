@@ -137,11 +137,15 @@ public class LoadingManager : MonoBehaviour
 	{
 		if (sceneToUnload != "") 
 		{
-			asyncUnloading = SceneManager.UnloadSceneAsync (this.sceneToUnload);
-
-			while (!asyncUnloading.isDone) 
+			string[] sceneToUnloadQueue = this.sceneToUnload.Split (',');
+			for (int i = 0; sceneToUnloadQueue.Length > i; i++) 
 			{
-				yield return null;
+				asyncUnloading = SceneManager.UnloadSceneAsync (sceneToUnloadQueue[i]);
+
+				while (!asyncUnloading.isDone) 
+				{
+					yield return null;
+				}
 			}
 			sceneToUnload = "";
 		}
