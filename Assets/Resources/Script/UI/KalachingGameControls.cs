@@ -7,14 +7,18 @@ public class KalachingGameControls : MonoBehaviour
 {
 	[SerializeField] private Camera mainCamera;
 	[SerializeField] private Text timeLabel;
+	[SerializeField] private MovementTouchController movementTouchController;
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
 	private const int MAX_TIME = 86400;
+	private Coroutine timeRoutineHolder = null;
 
 	private static KalachingGameControls instance;
 	public static KalachingGameControls Instance { get { return instance; } }
-	private Coroutine timeRoutineHolder = null;
+	public float GetControlHorizontal{ get {return movementTouchController.Horizontal ();} }
+	public float GetControlVertical{ get {return movementTouchController.Vertical ();} }
+
 	void Awake()
 	{
 		instance = this;
