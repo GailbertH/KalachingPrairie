@@ -8,17 +8,18 @@ using UnityEngine;
 /// </summary>
 public class GameManager : MonoBehaviour 
 {
-	/*
+	
 	private static GameManager instance;
-	private KalachingStateMachine stateMachine;
+	//private KalachingStateMachine stateMachine;
 
 	public static GameManager Instance { get { return instance; } }
 
+	/*
 	public KalachingStateMachine StateMachine
 	{
 		get { return this.stateMachine; }
 	}
-
+		*/
 	public KalachingGameControls GameControls
 	{
 		get { return KalachingGameControls.Instance != null ? KalachingGameControls.Instance : null; }
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
 	{
 		instance = this;
 	}
-
+	/*
 	void Start()
 	{
 		stateMachine = new BrynhildrStateMachine (this);
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
 			stateMachine.Update ();
 		}
 	}
-	#endregion
 	*/
+	#endregion
+
 }
