@@ -7,6 +7,7 @@ public class MovementTouchController : MonoBehaviour, IDragHandler, IPointerUpHa
 {
 	[SerializeField] private Image bgImg;
 	private Vector3 inputVector;
+	private Vector2 touchPos;
 
 	public virtual void OnDrag(PointerEventData ped)
 	{
@@ -15,13 +16,9 @@ public class MovementTouchController : MonoBehaviour, IDragHandler, IPointerUpHa
 			,ped.position
 			,ped.pressEventCamera
 			,out pos))
-		{
-			pos.x = (pos.x /bgImg.rectTransform.sizeDelta.x);
-			pos.y = (pos.y /bgImg.rectTransform.sizeDelta.y);
-
-			inputVector = new Vector3 (pos.x * 2f, 0f, pos.y * 2f);
-			inputVector = (inputVector.magnitude > 1f) ? inputVector.normalized : inputVector;
-			Debug.Log (inputVector.ToString());
+		{ 
+			Vector3 screenTouch = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			touchPos = new Vector2 (screenTouch.x, screenTouch.y);
 		}
 	}
 
@@ -33,6 +30,11 @@ public class MovementTouchController : MonoBehaviour, IDragHandler, IPointerUpHa
 	public virtual void OnPointerUp(PointerEventData ped) 
 	{
 		inputVector = Vector3.zero;
+	}
+
+	public Vector2 TouchPosition()
+	{
+		return touchPos;
 	}
 
 	public float Horizontal()

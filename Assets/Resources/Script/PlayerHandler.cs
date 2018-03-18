@@ -11,8 +11,9 @@ public class PlayerHandler : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		vertical = GameManager.Instance.GameControls.GetControlVertical;
-		horizontal = GameManager.Instance.GameControls.GetControlHorizontal;
-		Player.transform.localPosition = new Vector3 (Player.transform.localPosition.x + horizontal * 0.1f, Player.transform.localPosition.y + vertical* 0.1f, 0);
+		Vector2 newPos = GameManager.Instance.GameControls.GetTouchInput;
+		Vector2 curPos = new Vector2 (this.transform.position.x, this.transform.position.y);
+		Player.transform.localPosition = Vector2.MoveTowards(curPos, newPos, 0.05f);
+			
 	}
 }
