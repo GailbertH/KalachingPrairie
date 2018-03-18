@@ -8,6 +8,7 @@ public class KalachingGameControls : MonoBehaviour
 	[SerializeField] private Camera mainCamera;
 	[SerializeField] private Text timeLabel;
 	[SerializeField] private MovementTouchController movementTouchController;
+	[SerializeField] private List<PopupBase> shopPopup;
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
@@ -18,6 +19,7 @@ public class KalachingGameControls : MonoBehaviour
 	public static KalachingGameControls Instance { get { return instance; } }
 	public float GetControlHorizontal{ get {return movementTouchController.Horizontal ();} }
 	public float GetControlVertical{ get {return movementTouchController.Vertical ();} }
+	public Vector2 GetTouchInput{ get { return movementTouchController.TouchPosition (); } }
 
 	void Awake()
 	{
@@ -87,11 +89,11 @@ public class KalachingGameControls : MonoBehaviour
 	}
 	public void Map()
 	{
-
+		shopPopup[1].Show ();
 	}
 	public void Shop()
 	{
-
+		shopPopup[0].Show ();
 	}
 	public void Settings()
 	{
