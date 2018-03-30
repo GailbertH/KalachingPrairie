@@ -146,7 +146,7 @@ namespace Anima2D
 
 			solver.Update();
 
-			if(orientChild && target.child)
+			if(orientChild && target!=null && target.child)
 			{
 				target.child.transform.rotation = transform.rotation;
 			}
