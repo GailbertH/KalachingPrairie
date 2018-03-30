@@ -6,6 +6,10 @@ public class SkinnedMeshCombiner : MonoBehaviour
 {
 	[SerializeField]
 	SpriteMeshInstance[] m_SpriteMeshInstances;
+	[SerializeField]
+	SortOrderNameTracker sortingLayerName;
+	[SerializeField]
+	int sortingOrder;
 
 	SpriteMeshInstance[] spriteMeshInstances {
 		get {
@@ -123,6 +127,8 @@ public class SkinnedMeshCombiner : MonoBehaviour
 		combinedSkinnedRenderer.sharedMesh.boneWeights = boneWeights.ToArray();
 		combinedSkinnedRenderer.sharedMesh.bindposes = bindposes.ToArray();
 		combinedSkinnedRenderer.sharedMesh.RecalculateBounds();
+		combinedSkinnedRenderer.sortingLayerName = sortingLayerName.ToString();
+		combinedSkinnedRenderer.sortingOrder = sortingOrder;
 
 		combinedSkinnedRenderer.materials = spriteMeshInstances[0].sharedMaterials;
 

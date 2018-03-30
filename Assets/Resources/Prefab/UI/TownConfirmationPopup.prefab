@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224287369502273570}
-  - component: {fileID: 114358693926580298}
+  - component: {fileID: 114642028946862056}
   m_Layer: 5
   m_Name: TownConfirmationPopup
   m_TagString: Untagged
@@ -331,17 +331,6 @@ MonoBehaviour:
   m_Text: 'Do you wanna go to town ?
 
 '
---- !u!114 &114358693926580298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908269303132232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b7540796c0f434ebe2e2ad37ccc638, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114452506067167856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,6 +358,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114642028946862056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1908269303132232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247fda6707f3a4518b249c3950d5465e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114820461150601652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114358693926580298}
+      - m_Target: {fileID: 114642028946862056}
         m_MethodName: ButtonClose
         m_Mode: 1
         m_Arguments:
@@ -460,8 +460,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114358693926580298}
-        m_MethodName: ButtonClose
+      - m_Target: {fileID: 114642028946862056}
+        m_MethodName: YesButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -512,8 +512,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114358693926580298}
-        m_MethodName: ButtonClose
+      - m_Target: {fileID: 114642028946862056}
+        m_MethodName: NoButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

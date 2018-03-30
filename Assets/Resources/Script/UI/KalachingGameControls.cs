@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum ToggleState
+{
+	SHOW = 0,
+	HIDE = 1
+}
+
 public class KalachingGameControls : MonoBehaviour 
 {
 	[SerializeField] private Camera mainCamera;
 	[SerializeField] private Text timeLabel;
+	[SerializeField] private RectTransform menu;
 	[SerializeField] private MovementTouchController movementTouchController;
 	[SerializeField] private List<PopupBase> shopPopup;
+
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
 	private const int MAX_TIME = 86400;
 	private Coroutine timeRoutineHolder = null;
-
+	private ToggleState toggleState;
 	private static KalachingGameControls instance;
 	public static KalachingGameControls Instance { get { return instance; } }
 	public float GetControlHorizontal{ get {return movementTouchController.Horizontal ();} }
@@ -28,6 +36,11 @@ public class KalachingGameControls : MonoBehaviour
 
 	void Start()
 	{
+		toggleState = ToggleState.HIDE;
+		Vector3 rectPost = menu.anchoredPosition3D;
+		rectPost = new Vector3 (860f, 0f, 0f);
+		menu.anchoredPosition3D = rectPost;
+
 		time = PlayerPrefs.GetInt ("GAME_TIME", time);
 		timeLabel.text = TimeConverter (time);
 		timeRoutineHolder = StartCoroutine (TimeRoutine ());
@@ -75,10 +88,31 @@ public class KalachingGameControls : MonoBehaviour
 
 	public void Home()
 	{
-		LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_UI + "," + SceneNames.GAME_SCENE);
+		if(GameManager.Instance.GetAreaMode == AreaMode.FARM)
+			LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_UI + "," + SceneNames.GAME_SCENE);
+		else
+			LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_UI + "," + SceneNames.TOWN_SCENE);
 		LoadingManager.Instance.SetSceneToLoad (SceneNames.MAIN_MENU);
 		LoadingManager.Instance.LoadGameScene ();
 	}
+
+	public void ToggleMenu()
+	{
+		Vector3 rectPost = menu.anchoredPosition3D;
+		if (toggleState == ToggleState.HIDE) 
+		{
+			toggleState = ToggleState.SHOW;
+			rectPost = Vector3.zero;
+		} 
+		else 
+		{
+			toggleState = ToggleState.HIDE;
+			rectPost = new Vector3 (860f, 0f, 0f);
+		}
+		menu.anchoredPosition3D = rectPost;
+	}
+
+	#region Button
 	public void Journal()
 	{
 
@@ -91,6 +125,20 @@ public class KalachingGameControls : MonoBehaviour
 	{
 		shopPopup[1].Show ();
 	}
+
+	public void GoToTown()
+	{
+		LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_SCENE);
+		LoadingManager.Instance.SetSceneToLoad (SceneNames.TOWN_SCENE);
+		LoadingManager.Instance.LoadGameScene ();
+	}
+	public void GoToFarm()
+	{
+		LoadingManager.Instance.SetSceneToUnload (SceneNames.TOWN_SCENE);
+		LoadingManager.Instance.SetSceneToLoad (SceneNames.GAME_SCENE);
+		LoadingManager.Instance.LoadGameScene ();
+	}
+
 	public void Shop()
 	{
 		shopPopup[0].Show ();
@@ -99,4 +147,5 @@ public class KalachingGameControls : MonoBehaviour
 	{
 
 	}
+	#endregion
 }
