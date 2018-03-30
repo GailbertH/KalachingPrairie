@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum AreaMode
+{
+	FARM = 0,
+	TOWN = 1
+}
 /// <summary>
 /// Handler of the whole gameplay
 /// -Gailbert Huang
 /// </summary>
 public class GameManager : MonoBehaviour 
 {
-	
+	[SerializeField] AreaMode areaMode = AreaMode.FARM;
 	private static GameManager instance;
 	//private KalachingStateMachine stateMachine;
 
 	public static GameManager Instance { get { return instance; } }
-
+	public AreaMode GetAreaMode{get { return areaMode; }}
 	/*
 	public KalachingStateMachine StateMachine
 	{

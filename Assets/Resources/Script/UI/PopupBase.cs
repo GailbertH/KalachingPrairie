@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PopupBase : MonoBehaviour 
 {
-	public void Show()
+	public virtual void Show()
 	{
 		this.gameObject.SetActive (true);
+		Setup ();
 	}
-	public void ButtonClose()
+	public virtual void Setup()
+	{
+		
+	}
+	public virtual void ButtonClose()
 	{
 		this.Hide ();
 	}
-	public void Hide()
+	public virtual void Hide()
 	{
 		this.gameObject.SetActive (false);
 	}
