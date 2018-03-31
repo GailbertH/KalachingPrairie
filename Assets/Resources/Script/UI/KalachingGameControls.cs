@@ -16,7 +16,7 @@ public class KalachingGameControls : MonoBehaviour
 	[SerializeField] private RectTransform menu;
 	[SerializeField] private MovementTouchController movementTouchController;
 	[SerializeField] private List<PopupBase> shopPopup;
-
+	[SerializeField] private RectTransform toggleButton;
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
@@ -52,6 +52,11 @@ public class KalachingGameControls : MonoBehaviour
 		timeRoutineHolder = null;
 	}
 
+	public void NewDay()
+	{
+		time = 0;
+	}
+
 	private IEnumerator TimeRoutine()
 	{
 		while (true)
@@ -59,7 +64,7 @@ public class KalachingGameControls : MonoBehaviour
 			yield return new WaitForSeconds (1);
 			if (time <= MAX_TIME)
 			{
-				time += 12;
+				time += 30;
 			}
 			else 
 			{
@@ -74,7 +79,7 @@ public class KalachingGameControls : MonoBehaviour
 	{
 		int hour = 0;
 		int min = 0;
-		int sec = 0;
+		//int sec = 0;
 		string AMPM = "";
 
 		hour = timeToConvert / 3600;
@@ -82,10 +87,11 @@ public class KalachingGameControls : MonoBehaviour
 		AMPM = hour > 12 ? "PM" : "AM";
 		hour = hour > 12 ? hour - 12 : hour;
 		min = (timeToConvert % 3600) / 60;
-		sec = (((timeToConvert % 3600) % 60));
-		return (hour.ToString ("00:") + min.ToString ("00:") + sec.ToString ("00") + " " + AMPM);
+		//sec = (((timeToConvert % 3600) % 60));
+		return (hour.ToString ("00:") + min.ToString ("00:") + " " + AMPM);
 	}
 
+	#region Button
 	public void Home()
 	{
 		if(GameManager.Instance.GetAreaMode == AreaMode.FARM)
@@ -96,23 +102,35 @@ public class KalachingGameControls : MonoBehaviour
 		LoadingManager.Instance.LoadGameScene ();
 	}
 
+	public void Equipment()
+	{
+		if (GameManager.Instance == null)
+			return;
+
+		if (GameManager.Instance.PlayerHandler == null)
+			return;
+
+		GameManager.Instance.PlayerHandler.ChangeItemEquip ();
+	}
+
 	public void ToggleMenu()
 	{
 		Vector3 rectPost = menu.anchoredPosition3D;
 		if (toggleState == ToggleState.HIDE) 
 		{
+			toggleButton.Rotate (0, 0, 180f);
 			toggleState = ToggleState.SHOW;
 			rectPost = Vector3.zero;
 		} 
 		else 
 		{
+			toggleButton.Rotate (0, 0, 180f);
 			toggleState = ToggleState.HIDE;
 			rectPost = new Vector3 (860f, 0f, 0f);
 		}
 		menu.anchoredPosition3D = rectPost;
 	}
 
-	#region Button
 	public void Journal()
 	{
 
