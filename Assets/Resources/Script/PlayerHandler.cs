@@ -6,6 +6,7 @@ using System;
 public class PlayerHandler : MonoBehaviour {
 
 	[SerializeField] GameObject Player;
+	[SerializeField] Rigidbody2D rigBody;
 	private PlayerData playerData;
 	private ItemEquip equipedItem = ItemEquip.WATERING_CAN;
 	private PlantType seedType = PlantType.STRAWBERRY;
@@ -58,6 +59,7 @@ public class PlayerHandler : MonoBehaviour {
 		
 		Vector2 curPos = new Vector2 (this.transform.position.x, this.transform.position.y);
 		//Player.transform.localPosition = Vector2.MoveTowards(curPos, newPos, 0.05f);
-		Player.GetComponent<Rigidbody2D> ().MovePosition (Vector2.MoveTowards(curPos, newPos, 0.05f));
+		if(rigBody != null )
+			rigBody.MovePosition (Vector2.MoveTowards(curPos, newPos, 0.05f));
 	}
 }

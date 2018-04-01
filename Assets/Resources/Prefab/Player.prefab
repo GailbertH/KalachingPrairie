@@ -1754,6 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1230034372066604}
+  rigBody: {fileID: 50644721631174562}
 --- !u!114 &114891907358738198
 MonoBehaviour:
   m_ObjectHideFlags: 1
