@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public enum ToggleState
 {
@@ -17,6 +18,8 @@ public class KalachingGameControls : MonoBehaviour
 	[SerializeField] private MovementTouchController movementTouchController;
 	[SerializeField] private List<PopupBase> shopPopup;
 	[SerializeField] private RectTransform toggleButton;
+	[SerializeField] private GameObject screenBlack;
+	[SerializeField] private List<GameObject> EquipmentList;
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
@@ -91,6 +94,17 @@ public class KalachingGameControls : MonoBehaviour
 		return (hour.ToString ("00:") + min.ToString ("00:") + " " + AMPM);
 	}
 
+	public void ScreenActivate(bool show)
+	{
+		screenBlack.SetActive (show);
+	}
+
+	public void MakePopup(string msg, Action yes, Action no = null)
+	{
+		((Popup_Confirmation)shopPopup[1]).SetupPopup (msg, yes, no);
+		shopPopup [1].Show ();
+	}
+
 	#region Button
 	public void Home()
 	{
@@ -111,6 +125,24 @@ public class KalachingGameControls : MonoBehaviour
 			return;
 
 		GameManager.Instance.PlayerHandler.ChangeItemEquip ();
+
+		int item = 0;
+		if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.WATERING_CAN) 
+			item = (int)GameManager.Instance.PlayerHandler.GetItemEquip;
+		
+		else if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.SEED)
+			item = (int)(GameManager.Instance.PlayerHandler.GetItemEquip) + (int)(GameManager.Instance.PlayerHandler.GetSeedType);
+		
+		if(item < EquipmentList.Count)
+			ShowItem(item);
+	}
+
+	private void ShowItem(int targetIndex)
+	{
+		for (int i = 0; i < EquipmentList.Count; i++)
+		{
+			EquipmentList [i].SetActive (i == targetIndex);
+		}
 	}
 
 	public void ToggleMenu()
@@ -139,19 +171,30 @@ public class KalachingGameControls : MonoBehaviour
 	{
 
 	}
+
 	public void Map()
 	{
-		shopPopup[1].Show ();
+		if (GameManager.Instance == null)
+			return;
+		
+		if(GameManager.Instance.GetAreaMode == AreaMode.FARM)
+			((Popup_Confirmation)shopPopup[1]).SetupPopup ("Do you want to go to Town? ", GoToTown, null);
+		else
+			((Popup_Confirmation)shopPopup[1]).SetupPopup ("Do you want to go back to your Farm?", GoToFarm, null);
+
+		shopPopup [1].Show ();
 	}
 
 	public void GoToTown()
 	{
+		ScreenActivate (true);
 		LoadingManager.Instance.SetSceneToUnload (SceneNames.GAME_SCENE);
 		LoadingManager.Instance.SetSceneToLoad (SceneNames.TOWN_SCENE);
 		LoadingManager.Instance.LoadGameScene ();
 	}
 	public void GoToFarm()
 	{
+		ScreenActivate (true);
 		LoadingManager.Instance.SetSceneToUnload (SceneNames.TOWN_SCENE);
 		LoadingManager.Instance.SetSceneToLoad (SceneNames.GAME_SCENE);
 		LoadingManager.Instance.LoadGameScene ();
