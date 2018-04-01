@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 6845347d3c635894bb849b4e6b6e7a9a
+timeCreated: 1522572895
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: chitang 1_0
+    21300002: chitang 1_1
+    21300004: chitang 1_2
+    21300006: chitang 1_3
+    21300008: chitang 1_4
+    21300010: chitang 1_5
+    21300012: chitang 1_6
+    21300014: chitang 1_7
+    21300016: chitang 1_8
+    21300018: chitang 1_9
+    21300020: chitang 1_10
+    21300022: chitang 1_11
+    21300024: chitang 1_12
+    21300026: chitang 1_13
+    21300028: chitang 1_14
+    21300030: chitang 1_15
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chitang 1_0
+      rect:
+        serializedVersion: 2
+        x: 788.9103
+        y: 1579.801
+        width: 423.02734
+        height: 434.16016
+      alignment: 9
+      pivot: {x: 0.4954521, y: 0.5025771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_1
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1868
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_2
+      rect:
+        serializedVersion: 2
+        x: 1455.1152
+        y: 1471.6819
+        width: 449.7461
+        height: 568.8672
+      alignment: 9
+      pivot: {x: 0.49891403, y: 0.4514551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_3
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1523
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_4
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1483
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_5
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1468
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_6
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1434
+        width: 45
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_7
+      rect:
+        serializedVersion: 2
+        x: 926.20325
+        y: 1309.0078
+        width: 138.02734
+        height: 113.53516
+      alignment: 9
+      pivot: {x: 0.48031566, y: 0.4799598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_8
+      rect:
+        serializedVersion: 2
+        x: 1421.5977
+        y: 1030.0431
+        width: 239.33594
+        height: 291.66016
+      alignment: 9
+      pivot: {x: 0.29833472, y: 0.2810018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_9
+      rect:
+        serializedVersion: 2
+        x: 428.08594
+        y: 1066.1368
+        width: 203.711
+        height: 250.46875
+      alignment: 9
+      pivot: {x: 0.47819737, y: 0.5005142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_10
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1306
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_11
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 865
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_12
+      rect:
+        serializedVersion: 2
+        x: 860.32043
+        y: 693.97266
+        width: 288.3203
+        height: 515.4297
+      alignment: 9
+      pivot: {x: 0.5000677, y: 0.5006063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 743
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_14
+      rect:
+        serializedVersion: 2
+        x: 762.9493
+        y: 290.3203
+        width: 132.46094
+        height: 355.11713
+      alignment: 9
+      pivot: {x: 0.5024172, y: 0.4975251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chitang 1_15
+      rect:
+        serializedVersion: 2
+        x: 1083.004
+        y: 267.03906
+        width: 154.72656
+        height: 391.85547
+      alignment: 9
+      pivot: {x: 0.48793155, y: 0.49625677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 99783364781408
+  assetBundleName: 
+  assetBundleVariant: 
