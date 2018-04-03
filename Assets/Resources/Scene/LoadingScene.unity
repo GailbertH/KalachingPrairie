@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29429026}
   - component: {fileID: 29429027}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: rightleaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2949268
+  m_Length: 0.2949267
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1514467369}
   m_AttachedIK: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470817475}
   - component: {fileID: 470817476}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: soil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44136298
+  m_Length: 0.44136292
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 632081737}
   m_AttachedIK: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632081737}
   - component: {fileID: 632081738}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: botstem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 746779709}
   - component: {fileID: 746779710}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mid1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.3749224
+  m_Length: 0.3749225
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1371184020}
   m_AttachedIK: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 819504036}
   - component: {fileID: 819504038}
   - component: {fileID: 819504037}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: leftleaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868350289}
   - component: {fileID: 868350290}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: leftip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 968532831}
   - component: {fileID: 968532832}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: left leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031175985}
   - component: {fileID: 1031175986}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1031,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1096469750}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1180719635
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1113,7 +1113,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1121,8 +1121,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1218,7 +1218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371184020}
   - component: {fileID: 1371184021}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: mid2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.38241115
+  m_Length: 0.3824114
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1031175985}
   m_AttachedIK: {fileID: 0}
@@ -1373,15 +1373,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 1}
+  m_Color: {r: 0.58823526, g: 0.58823526, b: 0.58823526, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300016, guid: 77ae29a93b0589d4d8968c467efeceb5, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 20d3e10b3b7864cdf8d32eac5e772890, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1471,7 +1471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1457229284}
   - component: {fileID: 1457229283}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoadingPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,17 +1501,17 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1457229282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 1.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.48, y: 119.880005, z: -9720}
+  m_LocalScale: {x: 108, y: 108, z: 108}
   m_Children:
   - {fileID: 2016241856}
   - {fileID: 1871129823}
   - {fileID: 1935539838}
   - {fileID: 819504036}
   - {fileID: 1096469750}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2009907901}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514467368
 GameObject:
@@ -1522,7 +1522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514467369}
   - component: {fileID: 1514467370}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: rightip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 1871129823}
   - component: {fileID: 1871129825}
   - component: {fileID: 1871129824}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: soil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 1935539838}
   - component: {fileID: 1935539840}
   - component: {fileID: 1935539839}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: rightleaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1910,6 +1910,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1382885338}
+  - {fileID: 1457229284}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1954,7 +1955,7 @@ GameObject:
   - component: {fileID: 2016241856}
   - component: {fileID: 2016241858}
   - component: {fileID: 2016241857}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,6 +2078,7 @@ MonoBehaviour:
   loadingMeter: {fileID: 0}
   canvas: {fileID: 2009907897}
   mainCamera: {fileID: 1180719638}
+  plantLoading: {fileID: 1457229282}
 --- !u!4 &2091213020
 Transform:
   m_ObjectHideFlags: 0

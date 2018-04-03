@@ -10,6 +10,8 @@ public class PlayerData
 	public long gold;
 	public long dayMonthYear; //temporary
 	public int time;
+	public int daysElapsed;
+	public int moonCycleCount;
 	public Vector3 playerPosition;
 
 	#region Inventory Region
@@ -18,4 +20,9 @@ public class PlayerData
 	public int strawberryCount;
 	public int riceCount;
 	#endregion
+}
+public enum ItemEquip
+{
+	WATERING_CAN = 0,
+	SEED = 1
 }

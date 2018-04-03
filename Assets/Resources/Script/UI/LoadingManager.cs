@@ -8,6 +8,7 @@ public class LoadingManager : MonoBehaviour
 	[SerializeField] private LoadingMeter loadingMeter;
 	[SerializeField] GameObject canvas;
 	[SerializeField] Camera mainCamera;
+	[SerializeField] GameObject plantLoading;
 
 	private AsyncOperation asyncLoading;
 	private AsyncOperation asyncUnloading;
@@ -31,6 +32,7 @@ public class LoadingManager : MonoBehaviour
 
 	private void SetUpLoadingMeter()
 	{
+		canvas.GetComponent<CanvasGroup> ().alpha = 1;
 		mainCamera.gameObject.SetActive (true);
 		if (loadingMeter != null) 
 		{
@@ -78,6 +80,9 @@ public class LoadingManager : MonoBehaviour
 		if (canvas != null)
 			canvas.SetActive (true);
 
+		if (plantLoading != null)
+			plantLoading.SetActive (true);
+
 		this.SetUpLoadingMeter ();
 		if (loadingMeter != null) 
 		{
@@ -90,6 +95,9 @@ public class LoadingManager : MonoBehaviour
 	{
 		if (canvas != null)
 			canvas.SetActive (true);
+
+		if (plantLoading != null)
+			plantLoading.SetActive (true);
 
 		this.SetUpLoadingMeter ();
 		if (loadingMeter != null)
@@ -126,9 +134,17 @@ public class LoadingManager : MonoBehaviour
 		if (loadingMeter == null) 
 		{
 			yield return new WaitForEndOfFrame();
-			if (canvas != null)
-				canvas.GetComponent<Animation> ().Play();
+			if (plantLoading != null)
+				plantLoading.SetActive (true);
 			yield return new WaitForSeconds(0.5f);
+			if (canvas != null) 
+				canvas.GetComponent<Animation> ().Play ();
+			
+			yield return new WaitForSeconds(0.5f);
+			if (GameManager.Instance != null && GameManager.Instance.GameControls != null) 
+			{
+				GameManager.Instance.GameControls.ScreenActivate (false);
+			}
 			OnLoadBarFull ();
 		}
 	}
