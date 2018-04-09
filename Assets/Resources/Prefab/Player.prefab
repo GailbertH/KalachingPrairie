@@ -1099,7 +1099,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1230034372066604}
-  rigBody: {fileID: 0}
+  rigBody: {fileID: 50644721631174562}
 --- !u!114 &114891907358738198
 MonoBehaviour:
   m_ObjectHideFlags: 1

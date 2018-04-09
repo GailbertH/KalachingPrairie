@@ -62,7 +62,7 @@ public class PlantController : MonoBehaviour
 	{
 		int tracker = pData.daysRequired - pData.countDown;
 		tracker = tracker / 2;
-		if (tracker < pData.spriteForms.Length && !isEmpty) 
+		if (tracker < pData.spriteForms.Length && !isEmpty && pData.spriteForms[tracker] != null) 
 		{
 			spriteRender.sprite	= pData.spriteForms [tracker];
 		} 

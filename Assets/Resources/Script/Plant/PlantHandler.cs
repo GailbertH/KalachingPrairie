@@ -10,6 +10,19 @@ public class PlantHandler : MonoBehaviour
 	[SerializeField] Sprite deadPlant;
 
 	public PlantController targetPlant;
+
+	void Start()
+	{
+		Invoke ("DelayTurnOn", 0.5f);
+	}
+
+	private void DelayTurnOn()
+	{
+		if(plantController != null)
+			for (int i = 0; i < plantController.Count; i++)
+				plantController [i].gameObject.SetActive (true);
+	}
+
 	public Sprite GetEmptySoilForm
 	{
 		get{ return soil;}
