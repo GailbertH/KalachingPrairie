@@ -31,13 +31,16 @@ public class PlantHandler : MonoBehaviour
 	{
 		targetPlant.SetUpPlanting (plantData [(int)type]);
 	}
+	public void RemovePlant()
+	{
+		targetPlant.SetUpPlanting (null);
+	}
 
 	public void DayCycle()
 	{
 		for(int i = 0; i < plantController.Count; i++)
 		{
 			plantController [i].ReduceCountDown ();
-			plantController [i].ChangePlantNeedState (PlantNeedState.WATER);
 		}
 	}
 }

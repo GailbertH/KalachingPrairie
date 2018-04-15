@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2949267
+  m_Length: 0.29492676
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1514467369}
   m_AttachedIK: {fileID: 0}
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.37492228
+  m_Length: 0.3749225
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1371184020}
   m_AttachedIK: {fileID: 0}
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.38137123
+  m_Length: 0.38137126
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 868350289}
   m_AttachedIK: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 1180719637}
   - component: {fileID: 1180719636}
   - component: {fileID: 1180719635}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1109,11 +1109,11 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 100
+  field of view: 1
   orthographic: 1
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.38241127
+  m_Length: 0.3824114
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1031175985}
   m_AttachedIK: {fileID: 0}
