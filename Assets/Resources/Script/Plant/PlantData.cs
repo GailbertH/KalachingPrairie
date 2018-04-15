@@ -35,6 +35,7 @@ public class PlantData
 	public CropType cropType;
 	public int daysRequired;
 	public int countDown;
+	public int unWateredCounter;
 	public long cash;
 	public Sprite currentSpriteForm;
 	public Sprite[] spriteForms;
@@ -48,6 +49,7 @@ public class PlantData
 		data.cropType = cropType;
 		data.daysRequired = daysRequired;
 		data.countDown = countDown;
+		data.unWateredCounter = unWateredCounter;
 		data.cash = cash;
 		data.currentSpriteForm = currentSpriteForm;
 		data.spriteForms = spriteForms;

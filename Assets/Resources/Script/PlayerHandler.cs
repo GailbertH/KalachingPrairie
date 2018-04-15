@@ -60,6 +60,6 @@ public class PlayerHandler : MonoBehaviour {
 		Vector2 curPos = new Vector2 (this.transform.position.x, this.transform.position.y);
 		//Player.transform.localPosition = Vector2.MoveTowards(curPos, newPos, 0.05f);
 		if(rigBody != null )
-			rigBody.MovePosition (Vector2.MoveTowards(curPos, newPos, 0.05f));
+			rigBody.MovePosition (Vector2.MoveTowards(curPos, newPos, 0.075f));
 	}
 }

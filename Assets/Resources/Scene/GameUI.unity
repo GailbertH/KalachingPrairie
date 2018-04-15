@@ -678,17 +678,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114567804174960340, guid: 6f41c215ad8604a909cc6c360aeb7781,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1759948293}
-    - target: {fileID: 114707103587373994, guid: 6f41c215ad8604a909cc6c360aeb7781,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1759948293}
-    - target: {fileID: 114923485437460700, guid: 6f41c215ad8604a909cc6c360aeb7781,
+    - target: {fileID: 114469354635746524, guid: 6f41c215ad8604a909cc6c360aeb7781,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -698,15 +688,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1759948293}
-    - target: {fileID: 114469354635746524, guid: 6f41c215ad8604a909cc6c360aeb7781,
+    - target: {fileID: 114923485437460700, guid: 6f41c215ad8604a909cc6c360aeb7781,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1759948293}
-    - target: {fileID: 1272093730180642, guid: 6f41c215ad8604a909cc6c360aeb7781, type: 2}
-      propertyPath: m_Name
-      value: CLICKBOX
-      objectReference: {fileID: 0}
+    - target: {fileID: 114707103587373994, guid: 6f41c215ad8604a909cc6c360aeb7781,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1759948293}
+    - target: {fileID: 114567804174960340, guid: 6f41c215ad8604a909cc6c360aeb7781,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1759948293}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f41c215ad8604a909cc6c360aeb7781, type: 2}
   m_IsPrefabParent: 0

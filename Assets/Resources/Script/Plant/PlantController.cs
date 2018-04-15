@@ -21,10 +21,13 @@ public class PlantController : MonoBehaviour
 		if (GameManager.Instance == null && GameManager.Instance.PlayerHandler == null && handler == null)
 			return;
 
-		Debug.Log (GameManager.Instance.PlayerHandler.GetItemEquip.ToString () + " " + GameManager.Instance.PlayerHandler.GetSeedType.ToString());
-
 		handler.targetPlant = this;
-		if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.SEED && isEmpty) 
+
+		if (pData != null && pData.plantNeed == PlantNeedState.HARVEST) 
+		{
+			handler.RemovePlant ();
+		}
+		else if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.SEED && isEmpty) 
 		{
 			handler.AddPlant (GameManager.Instance.PlayerHandler.GetSeedType);
 			pData.plantNeed = PlantNeedState.WATER;
@@ -44,7 +47,7 @@ public class PlantController : MonoBehaviour
 
 	public void ReduceCountDown()
 	{
-		if (!isEmpty) 
+		if (!isEmpty && pData != null && pData.countDown >= 0) 
 		{
 			pData.countDown -= 1;
 			UpdatePlant ();
@@ -53,18 +56,39 @@ public class PlantController : MonoBehaviour
 
 	public void SetUpPlanting(PlantData data)
 	{
-		pData = data.Copy ();
-		isEmpty = false;
-		spriteRender.sprite	= pData.spriteForms [0];
+		if (data != null) 
+		{
+			pData = data.Copy ();
+			isEmpty = false;
+			spriteRender.sprite	= pData.spriteForms [0];
+		}
+		else
+		{
+			isEmpty = true;
+			pData = null;
+		}
+		
+		UpdatePlant ();
 	}
 
 	public void UpdatePlant()
 	{
+		if (pData == null) 
+		{
+			spriteRender.sprite = handler.GetEmptySoilForm;
+			isEmpty = true;
+			return;
+		}
+
 		int tracker = pData.daysRequired - pData.countDown;
 		tracker = tracker / 2;
-		if (tracker < pData.spriteForms.Length && !isEmpty) 
+		if (tracker < pData.spriteForms.Length && !isEmpty && pData.spriteForms[tracker] != null) 
 		{
 			spriteRender.sprite	= pData.spriteForms [tracker];
+			if (tracker == pData.spriteForms.Length - 1 || pData.countDown <= 0)
+				ChangePlantNeedState (PlantNeedState.HARVEST);
+			else
+				ChangePlantNeedState (PlantNeedState.WATER);
 		} 
 		else if(isEmpty)
 		{

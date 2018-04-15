@@ -35,10 +35,12 @@ public class KalachingGameControls : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
+		this.gameObject.SetActive (false);
 	}
-
-	void Start()
+		
+	public void ShowGameControls()
 	{
+		this.gameObject.SetActive (true);
 		toggleState = ToggleState.HIDE;
 		Vector3 rectPost = menu.anchoredPosition3D;
 		rectPost = new Vector3 (860f, 0f, 0f);
