@@ -5,24 +5,24 @@ licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: journal_0
-    21300002: journal_1
-    21300004: journal_2
-    21300006: journal_3
-    21300008: journal_4
-    21300010: journal_5
-    21300012: journal_6
-    21300014: journal_7
-    21300016: journal_8
-    21300018: journal_9
-    21300020: journal_10
+    21300002: strawberry
+    21300004: sweet potato
+    21300006: Taro
+    21300008: cabbage
+    21300010: moon3
+    21300012: moon1
+    21300014: moon 6
+    21300016: moon0
+    21300018: Con Balikongkong
+    21300020: Con Wadwadan
     21300022: journal_11
-    21300024: journal_12
-    21300026: journal_13
-    21300028: journal_14
-    21300030: journal_15
-    21300032: journal_16
-    21300034: journal_17
-    21300036: journal_18
+    21300024: Con Hyades
+    21300026: rice
+    21300028: Beans
+    21300030: eggplant
+    21300032: carrot
+    21300034: Con San Apon
+    21300036: Con Tachong
     21300038: journal_19
     21300040: journal_20
     21300042: journal_21
@@ -39,12 +39,12 @@ TextureImporter:
     21300064: journal_32
     21300066: journal_33
     21300068: journal_34
-    21300070: journal_35
-    21300072: journal_36
-    21300074: journal_37
-    21300076: journal_38
-    21300078: journal_39
-    21300080: journal_40
+    21300070: Con Orions Belt
+    21300072: Con Mamawas
+    21300074: moon 4
+    21300076: moon2
+    21300078: moon 5
+    21300080: moon 7
     21300082: journal_41
     21300084: journal_42
     21300086: journal_43
@@ -169,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_1
+      name: strawberry
       rect:
         serializedVersion: 2
-        x: 29
-        y: 143
-        width: 27
-        height: 31
+        x: 17
+        y: 134
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,125 +183,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_2
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 144
-        width: 43
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_3
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 137
-        width: 49
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_4
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 138
-        width: 44
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_5
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 135
-        width: 42
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_6
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 136
-        width: 42
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_7
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 136
-        width: 42
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_8
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 138
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_13
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 89
-        width: 23
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: journal_14
+      name: sweet potato
       rect:
         serializedVersion: 2
         x: 72
-        y: 94
-        width: 43
-        height: 30
+        y: 131
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,13 +197,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_15
+      name: Taro
       rect:
         serializedVersion: 2
-        x: 142
-        y: 86
-        width: 38
-        height: 39
+        x: 137
+        y: 134
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,13 +211,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_16
+      name: cabbage
       rect:
         serializedVersion: 2
-        x: 206
-        y: 85
-        width: 43
-        height: 46
+        x: 202
+        y: 133
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,7 +225,119 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_17
+      name: moon3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 135
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 135
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon 6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 136
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon0
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 137
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rice
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 81
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Beans
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 84
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: eggplant
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 79
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: carrot
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 81
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Con San Apon
       rect:
         serializedVersion: 2
         x: 265
@@ -351,12 +351,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_37
+      name: moon 4
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 20
-        width: 42
+        width: 43
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -365,13 +365,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_38
+      name: moon2
       rect:
         serializedVersion: 2
         x: 77
         y: 20
         width: 43
-        height: 42
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,13 +379,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_39
+      name: moon 5
       rect:
         serializedVersion: 2
         x: 137
-        y: 20
-        width: 42
-        height: 44
+        y: 21
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,13 +393,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_40
+      name: moon 7
       rect:
         serializedVersion: 2
         x: 192
         y: 22
         width: 43
-        height: 42
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,7 +407,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_35
+      name: Con Orions Belt
       rect:
         serializedVersion: 2
         x: 271
@@ -415,13 +415,13 @@ TextureImporter:
         width: 66
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_36
+      name: Con Mamawas
       rect:
         serializedVersion: 2
         x: 437
@@ -429,13 +429,13 @@ TextureImporter:
         width: 75
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_9
+      name: Con Balikongkong
       rect:
         serializedVersion: 2
         x: 502
@@ -443,13 +443,13 @@ TextureImporter:
         width: 115
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_10
+      name: Con Wadwadan
       rect:
         serializedVersion: 2
         x: 429
@@ -457,7 +457,7 @@ TextureImporter:
         width: 105
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -471,13 +471,13 @@ TextureImporter:
         width: 106
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_12
+      name: Con Hyades
       rect:
         serializedVersion: 2
         x: 341
@@ -485,13 +485,13 @@ TextureImporter:
         width: 93
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: journal_18
+      name: Con Tachong
       rect:
         serializedVersion: 2
         x: 563
@@ -499,7 +499,7 @@ TextureImporter:
         width: 127
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -2965,6 +2965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1230034372066604}
   rigBody: {fileID: 50644721631174562}
+  playerAnim: {fileID: 95376457842587894}
 --- !u!114 &114830161734468364
 MonoBehaviour:
   m_ObjectHideFlags: 1
