@@ -167,7 +167,7 @@ public class KalachingGameControls : MonoBehaviour
 
 	public void Journal()
 	{
-
+		shopPopup[2].Show ();
 	}
 	public void Inventory()
 	{
