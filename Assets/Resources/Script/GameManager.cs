@@ -19,11 +19,21 @@ public class GameManager : MonoBehaviour
 	[SerializeField] PlantHandler plantHandler;
 	private static GameManager instance;
 	private KalachingStateMachine stateMachine;
-
+	private int dayCounter = 1;
+	private int monthCounter = 1;
 	public static GameManager Instance { get { return instance; } }
 	public AreaMode GetAreaMode{get { return areaMode; }}
 	public KalachingStateMachine StateMachine{get{ return stateMachine;}}
-
+	public int DayCounter
+	{
+		set{ dayCounter = value;}
+		get{ return dayCounter;}
+	}
+	public int MonthCounter
+	{
+		set{ monthCounter = value;}
+		get{ return monthCounter;}
+	}
 	public KalachingGameControls GameControls
 	{
 		get { return KalachingGameControls.Instance != null ? KalachingGameControls.Instance : null; }
@@ -39,11 +49,14 @@ public class GameManager : MonoBehaviour
 
 	public void PlayerGoToSleep()
 	{
+		IncrementDay ();
+
 		if (PlantHandler != null)
 			PlantHandler.DayCycle ();
 
 		if (GameControls != null)
 			GameControls.NewDay ();
+		
 	}
 
 	#region Monobehavior Function
@@ -83,6 +96,18 @@ public class GameManager : MonoBehaviour
 		if (StateMachine.GetCurrentState.State == KalachingStates.INGAME) 
 		{
 			StateMachine.SwitchState (KalachingStates.EXIT);
+		}
+	}
+
+	public void IncrementDay()
+	{
+		dayCounter += 1;
+		if (dayCounter > 8) 
+		{
+			monthCounter += 1;
+			dayCounter = 1;
+			if (monthCounter > 12)
+				monthCounter = 1;
 		}
 	}
 }

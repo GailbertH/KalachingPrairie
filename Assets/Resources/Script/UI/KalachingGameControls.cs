@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+//using System.Text.RegularExpressions;
 
 public enum ToggleState
 {
@@ -20,6 +21,10 @@ public class KalachingGameControls : MonoBehaviour
 	[SerializeField] private RectTransform toggleButton;
 	[SerializeField] private GameObject screenBlack;
 	[SerializeField] private List<GameObject> EquipmentList;
+	[Header ("Day and Time Area")]
+	[SerializeField] private Image moonObj;
+	[SerializeField] private List<Sprite> moonSprite;
+	[SerializeField] private GameObject constellation;
 
 	private int time = 14400;
 	private const int MIN_TIME = 0;
@@ -60,6 +65,7 @@ public class KalachingGameControls : MonoBehaviour
 	public void NewDay()
 	{
 		time = 0;
+		UpdateGameDay ();
 	}
 
 	private IEnumerator TimeRoutine()
@@ -94,6 +100,13 @@ public class KalachingGameControls : MonoBehaviour
 		min = (timeToConvert % 3600) / 60;
 		//sec = (((timeToConvert % 3600) % 60));
 		return (hour.ToString ("00:") + min.ToString ("00:") + " " + AMPM);
+	}
+
+	public void UpdateGameDay()
+	{
+		int currentMoonStage = GameManager.Instance.DayCounter - 1;
+		if (currentMoonStage < moonSprite.Count)
+			moonObj.sprite = moonSprite [currentMoonStage];
 	}
 
 	public void ScreenActivate(bool show)
