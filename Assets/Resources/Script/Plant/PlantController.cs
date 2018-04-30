@@ -21,6 +21,10 @@ public class PlantController : MonoBehaviour
 		if (GameManager.Instance == null && GameManager.Instance.PlayerHandler == null && handler == null)
 			return;
 
+		//Debug.Log (Vector3.Distance (GameManager.Instance.PlayerHandler.transform.position, this.transform.position));
+		if (Vector3.Distance (GameManager.Instance.PlayerHandler.transform.position, this.transform.position) > 4.5f)
+			return;
+
 		handler.targetPlant = this;
 
 		if (pData != null && pData.plantNeed == PlantNeedState.HARVEST) 
@@ -29,12 +33,14 @@ public class PlantController : MonoBehaviour
 		}
 		else if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.SEED && isEmpty) 
 		{
+			GameManager.Instance.PlayerHandler.DontMove ();
 			handler.AddPlant (GameManager.Instance.PlayerHandler.GetSeedType);
 			pData.plantNeed = PlantNeedState.WATER;
 		} 
 		else if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.WATERING_CAN 
 			&& !isEmpty && pData.plantNeed == PlantNeedState.WATER)
 		{
+			GameManager.Instance.PlayerHandler.WateringAction ();
 			pData.plantNeed = PlantNeedState.NONE;
 		}
 	}

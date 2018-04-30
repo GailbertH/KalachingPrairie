@@ -13,6 +13,7 @@ public class PlayerHandler : MonoBehaviour {
 	private PlantType seedType = PlantType.STRAWBERRY;
 	private int EquipItemTracker = 0;
 	private int SeedEquipTracker = 0;
+	private bool disableMovement = false;
 	// Update is called once per frame
 	public ItemEquip GetItemEquip
 	{
@@ -50,12 +51,35 @@ public class PlayerHandler : MonoBehaviour {
 		equipedItem = (ItemEquip)EquipItemTracker;
 	}
 
+	public void DontMove()
+	{
+		disableMovement = true;
+		Invoke ("EndAction", 1f);
+	}
+
+	public void WateringAction()
+	{
+		playerAnim.SetBool ("Watering", true);
+		disableMovement = true;
+		Invoke ("EndAction", 4f);
+	}
+	private void EndAction()
+	{
+		if(GameManager.Instance != null && GameManager.Instance.GameControls != null)
+			GameManager.Instance.GameControls.SetTouchInput =  new Vector2 (this.transform.position.x, this.transform.position.y);
+		playerAnim.SetBool ("Watering", false);
+		disableMovement = false;
+	}
+
 	void FixedUpdate () 
 	{
 		if (GameManager.Instance == null )
 			return;
 
 		if (GameManager.Instance.GameControls == null)
+			return;
+
+		if (disableMovement)
 			return;
 
 		Vector2 newPos = GameManager.Instance.GameControls.GetTouchInput;

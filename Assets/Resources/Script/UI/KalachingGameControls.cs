@@ -36,6 +36,7 @@ public class KalachingGameControls : MonoBehaviour
 	public float GetControlHorizontal{ get {return movementTouchController.Horizontal ();} }
 	public float GetControlVertical{ get {return movementTouchController.Vertical ();} }
 	public Vector2 GetTouchInput{ get { return movementTouchController.TouchPosition (); } }
+	public Vector2 SetTouchInput{ set { movementTouchController.ForceSetPosition = value; } }
 
 	void Awake()
 	{
@@ -81,7 +82,7 @@ public class KalachingGameControls : MonoBehaviour
 			{
 				time = 0;
 			}
-			timeLabel.text = TimeConverter (time);
+			timeLabel.text = ((Month)GameManager.Instance.MonthCounter).ToString() + ", " + TimeConverter (time);
 			yield return new WaitForEndOfFrame ();
 		}
 	}
@@ -99,7 +100,7 @@ public class KalachingGameControls : MonoBehaviour
 		hour = hour > 12 ? hour - 12 : hour;
 		min = (timeToConvert % 3600) / 60;
 		//sec = (((timeToConvert % 3600) % 60));
-		return (hour.ToString ("00:") + min.ToString ("00:") + " " + AMPM);
+		return (hour.ToString ("00:") + min.ToString ("00") + " " + AMPM);
 	}
 
 	public void UpdateGameDay()
