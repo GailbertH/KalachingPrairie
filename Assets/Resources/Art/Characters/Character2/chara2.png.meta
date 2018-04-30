@@ -409,11 +409,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1633.7032
-        y: 537.3789
+        y: 542.9453
         width: 113.53516
-        height: 61.210938
+        height: 55.64453
       alignment: 9
-      pivot: {x: 0.4958541, y: 0.52476066}
+      pivot: {x: 0.4958541, y: 0.47722006}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: chara2_21
       rect:
         serializedVersion: 2
-        x: 1637.457
+        x: 1641.9102
         y: 506.34372
-        width: 99.0625
-        height: 54.53128
+        width: 94.609375
+        height: 47.851593
       alignment: 9
-      pivot: {x: 0.5051644, y: 0.43381122}
+      pivot: {x: 0.4818732, y: 0.49436766}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,6 +477,6 @@ TextureImporter:
     outline: []
     physicsShape: []
   spritePackingTag: 
-  userData: 99782710386323
+  userData: 99800197599094
   assetBundleName: 
   assetBundleVariant: 
