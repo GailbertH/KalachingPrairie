@@ -34,7 +34,13 @@ public class MovementTouchController : MonoBehaviour, IDragHandler, IPointerUpHa
 
 	public Vector2 TouchPosition()
 	{
+		//Debug.Log (touchPos);
 		return touchPos;
+	}
+
+	public Vector2 ForceSetPosition
+	{
+		set{ touchPos = value; }
 	}
 
 	public float Horizontal()
