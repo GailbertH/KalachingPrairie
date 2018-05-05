@@ -6,6 +6,8 @@ public class PlantController : MonoBehaviour
 {
 	[SerializeField] PlantHandler handler;
 	[SerializeField] SpriteRenderer spriteRender;
+	[SerializeField] GameObject waterIcon;
+
 	//int counter = 0;
 	PlantData pData;
 
@@ -35,13 +37,13 @@ public class PlantController : MonoBehaviour
 		{
 			GameManager.Instance.PlayerHandler.DontMove ();
 			handler.AddPlant (GameManager.Instance.PlayerHandler.GetSeedType);
-			pData.plantNeed = PlantNeedState.WATER;
+			ChangePlantNeedState (PlantNeedState.WATER);
 		} 
 		else if (GameManager.Instance.PlayerHandler.GetItemEquip == ItemEquip.WATERING_CAN 
 			&& !isEmpty && pData.plantNeed == PlantNeedState.WATER)
 		{
 			GameManager.Instance.PlayerHandler.WateringAction ();
-			pData.plantNeed = PlantNeedState.NONE;
+			ChangePlantNeedState (PlantNeedState.NONE);
 		}
 	}
 
@@ -49,6 +51,17 @@ public class PlantController : MonoBehaviour
 	{
 		if(!isEmpty)
 			pData.plantNeed = state;
+
+		if (pData.plantType == PlantType.RICE && pData.plantNeed == PlantNeedState.WATER)
+			pData.plantNeed = PlantNeedState.NONE;
+
+		if (waterIcon == null)
+			return;
+		
+		if (pData.plantNeed == PlantNeedState.WATER && pData.plantType != PlantType.RICE)
+			waterIcon.SetActive (true);
+		else
+			waterIcon.SetActive (false);
 	}
 
 	public void ReduceCountDown()
@@ -93,7 +106,7 @@ public class PlantController : MonoBehaviour
 			spriteRender.sprite	= pData.spriteForms [tracker];
 			if (tracker == pData.spriteForms.Length - 1 || pData.countDown <= 0)
 				ChangePlantNeedState (PlantNeedState.HARVEST);
-			else
+			else if(pData.plantType != PlantType.RICE)
 				ChangePlantNeedState (PlantNeedState.WATER);
 		} 
 		else if(isEmpty)

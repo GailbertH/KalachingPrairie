@@ -6,7 +6,7 @@ public class House : MonoBehaviour
 {
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		GameManager.Instance.GameControls.MakePopup("Do you want to go to bed?", Sleep);
+		GameManager.Instance.GameControls.MakePopup("Do you want to go to sleep?", Sleep);
 	}
 
 	public void Sleep()
@@ -17,7 +17,8 @@ public class House : MonoBehaviour
 
 	private void PlayerWakeUp()
 	{
-		GameManager.Instance.GameControls.ScreenActivate (false);
 		GameManager.Instance.PlayerGoToSleep ();
+		GameManager.Instance.GameControls.ShowConstellation ();
+		GameManager.Instance.GameControls.ScreenActivate (false);
 	}
 }
