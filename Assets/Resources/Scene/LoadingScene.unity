@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.29492664
+  m_Length: 0.2949267
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1514467369}
   m_AttachedIK: {fileID: 0}
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4413628
+  m_Length: 0.44136292
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 632081737}
   m_AttachedIK: {fileID: 0}
@@ -1380,8 +1380,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 20d3e10b3b7864cdf8d32eac5e772890, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: c0a51109f806d42b6b20abb7b6ad9063, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
