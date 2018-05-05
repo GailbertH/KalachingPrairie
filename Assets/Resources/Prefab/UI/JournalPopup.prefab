@@ -1334,7 +1334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: June - November
+  m_Text: July - September
 --- !u!114 &114017140539585828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1688,7 +1688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: March - April
+  m_Text: "Slightly visible on \n(January - February)"
 --- !u!114 &114148617948985662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1986,7 +1986,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: May - Septermber
+  m_Text: May - June
 --- !u!114 &114265007846061014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2528,7 +2528,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: January - February
+  m_Text: March - April
 --- !u!114 &114540754556500898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2938,7 +2938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: August - Septermber
+  m_Text: Slightly visible on May
 --- !u!114 &114846243072525806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2971,7 +2971,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: January - May
+  m_Text: January - March
 --- !u!114 &114872102550443278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3172,7 +3172,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 114007251269530578}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4509,8 +4509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: -307}
-  m_SizeDelta: {x: 450, y: 50}
+  m_AnchoredPosition: {x: -271, y: -314.5}
+  m_SizeDelta: {x: 450, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224510345034610178
 RectTransform:

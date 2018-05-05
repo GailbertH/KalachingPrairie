@@ -14,14 +14,18 @@ public enum ToggleState
 public class KalachingGameControls : MonoBehaviour 
 {
 	[SerializeField] private Camera mainCamera;
+	[Header ("Time Area")]
 	[SerializeField] private Text timeLabel;
+	[SerializeField] private Text monthLabel;
+	[SerializeField] private List<string> monthNames;
+	[Header ("Others Area")]
 	[SerializeField] private RectTransform menu;
 	[SerializeField] private MovementTouchController movementTouchController;
 	[SerializeField] private List<PopupBase> shopPopup;
 	[SerializeField] private RectTransform toggleButton;
 	[SerializeField] private GameObject screenBlack;
 	[SerializeField] private List<GameObject> EquipmentList;
-	[Header ("Day and Time Area")]
+	[Header ("Day Area")]
 	[SerializeField] private Image moonObj;
 	[SerializeField] private List<Sprite> moonSprite;
 	[SerializeField] private GameObject constellation;
@@ -37,7 +41,7 @@ public class KalachingGameControls : MonoBehaviour
 	public float GetControlVertical{ get {return movementTouchController.Vertical ();} }
 	public Vector2 GetTouchInput{ get { return movementTouchController.TouchPosition (); } }
 	public Vector2 SetTouchInput{ set { movementTouchController.ForceSetPosition = value; } }
-
+	private bool timeStop = false;
 	void Awake()
 	{
 		instance = this;
@@ -65,7 +69,7 @@ public class KalachingGameControls : MonoBehaviour
 
 	public void NewDay()
 	{
-		time = 0;
+		time = 14400;
 		UpdateGameDay ();
 	}
 
@@ -76,13 +80,16 @@ public class KalachingGameControls : MonoBehaviour
 			yield return new WaitForSeconds (1);
 			if (time <= MAX_TIME)
 			{
-				time += 30;
+				if(!timeStop)
+					time += 30;
 			}
 			else 
 			{
 				time = 0;
 			}
-			timeLabel.text = ((Month)GameManager.Instance.MonthCounter).ToString() + ", " + TimeConverter (time);
+			timeLabel.text = TimeConverter (time);
+			int monthCounter = GameManager.Instance.MonthCounter;
+			monthLabel.text = monthNames[monthCounter] + " (" + ((Month)monthCounter).ToString () + ")";
 			yield return new WaitForEndOfFrame ();
 		}
 	}
@@ -108,6 +115,18 @@ public class KalachingGameControls : MonoBehaviour
 		int currentMoonStage = GameManager.Instance.DayCounter - 1;
 		if (currentMoonStage < moonSprite.Count)
 			moonObj.sprite = moonSprite [currentMoonStage];
+	}
+
+	public void ShowConstellation()
+	{
+		((ConstellationPopup)shopPopup[3]).SetConMap();
+		shopPopup [3].Show();
+		timeStop = true;
+	}
+
+	public void ContinueTime()
+	{
+		timeStop = false;
 	}
 
 	public void ScreenActivate(bool show)
